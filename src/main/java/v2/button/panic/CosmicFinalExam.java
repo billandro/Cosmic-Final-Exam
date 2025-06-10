@@ -1,5 +1,8 @@
 package v2.button.panic;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * The CosmicFinalExam is a playful, intergalactic Java challenge set in a chaotic universe
  * filled with dragons, orglings, spacecraft, and questionable life choices.
@@ -29,6 +32,9 @@ public class CosmicFinalExam {
      */
     public static void welcome(int n) {
         // TODO: Implement method to print "Fanta" n times
+        String fanta = "Fanta\n";
+        if (n <= 0) return;
+        System.out.print(fanta.repeat(n));
     }
 
     /**
@@ -37,7 +43,11 @@ public class CosmicFinalExam {
      */
     public static double tagIn(double balance) {
         // TODO: Implement tagIn fare deduction logic
-        return 0;
+        if (balance < 12) {
+            throw new IllegalArgumentException();
+        }
+
+        return balance - 12;
     }
 
     /**
@@ -45,7 +55,10 @@ public class CosmicFinalExam {
      */
     public static double transfer(double balance) {
         // TODO: Implement transfer fare deduction logic
-        return 0;
+        if (balance < 2) {
+            throw new IllegalArgumentException("Balance cannot be less than 2");
+        }
+        return balance - 2;
     }
 
     /**
@@ -58,7 +71,13 @@ public class CosmicFinalExam {
      */
     public static double tagOut(String destination, double balance) throws IllegalArgumentException {
         // TODO: Implement tagOut fare deduction logic based on destination
-        return 0;
+        String myString = destination.toLowerCase();
+        return switch (myString) {
+            case "zenthros" -> balance - 20;
+            case "kryndor" -> balance - 22;
+            case "bryxaria" -> balance - 27;
+            default -> balance - 0;
+        };
     }
 
     /**
