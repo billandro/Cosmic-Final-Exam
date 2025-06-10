@@ -1,15 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: v2.button.panic.CosmicFinalExamTest
 -------------------------------------------------------------------------------
-Tests run: 31, Failures: 26, Errors: 0, Skipped: 0, Time elapsed: 0.03 s <<< FAILURE! - in v2.button.panic.CosmicFinalExamTest
-testDrawPyramidStandardCase  Time elapsed: 0.009 s  <<< FAILURE!
+Tests run: 31, Failures: 24, Errors: 0, Skipped: 0, Time elapsed: 0.596 s <<< FAILURE! - in v2.button.panic.CosmicFinalExamTest
+testDrawPyramidStandardCase  Time elapsed: 0.106 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 expected: <  #
  ##
 ###> but was: <>
 	at v2.button.panic.CosmicFinalExamTest.testDrawPyramidStandardCase(CosmicFinalExamTest.java:286)
 
-testDrawPyramidLarge  Time elapsed: 0.001 s  <<< FAILURE!
+testDrawPyramidLarge  Time elapsed: 0.005 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 expected: <          #
          ##
@@ -24,103 +24,98 @@ expected: <          #
 ###########> but was: <>
 	at v2.button.panic.CosmicFinalExamTest.testDrawPyramidLarge(CosmicFinalExamTest.java:327)
 
-testTagIn  Time elapsed: 0 s  <<< FAILURE!
+testTagIn  Time elapsed: 0.008 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <88.0> but was: <0.0>
 	at v2.button.panic.CosmicFinalExamTest.testTagIn(CosmicFinalExamTest.java:37)
 
-testVelocityExtremeValues  Time elapsed: 0.001 s  <<< FAILURE!
+testVelocityExtremeValues  Time elapsed: 0.004 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <1.0E10> but was: <0.0>
 	at v2.button.panic.CosmicFinalExamTest.testVelocityExtremeValues(CosmicFinalExamTest.java:229)
 
-testLawOfGravityZeroDistance  Time elapsed: 0 s  <<< FAILURE!
+testLawOfGravityZeroDistance  Time elapsed: 0.009 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: r=0 should throw IllegalArgumentException ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
 	at v2.button.panic.CosmicFinalExamTest.testLawOfGravityZeroDistance(CosmicFinalExamTest.java:186)
 
-testTagInAndTagOutDeductsDestinationFare  Time elapsed: 0.001 s  <<< FAILURE!
+testTagInAndTagOutDeductsDestinationFare  Time elapsed: 0.009 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 100 - 12 (tagIn) - 20 (Zenthros) = 68 ==> expected: <68.0> but was: <0.0>
 	at v2.button.panic.CosmicFinalExamTest.testTagInAndTagOutDeductsDestinationFare(CosmicFinalExamTest.java:131)
 
-testLawOfGravityStandardCase  Time elapsed: 0 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Should calculate Earth-Moon gravitational force ==> expected: <1.9804922390990566E20> but was: <0.0>
-	at v2.button.panic.CosmicFinalExamTest.testLawOfGravityStandardCase(CosmicFinalExamTest.java:172)
-
-testCaesarCipherEdgeCases  Time elapsed: 0 s  <<< FAILURE!
+testCaesarCipherEdgeCases  Time elapsed: 0.005 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <Hello> but was: <>
 	at v2.button.panic.CosmicFinalExamTest.testCaesarCipherEdgeCases(CosmicFinalExamTest.java:255)
 
-testIsPrimeStandardCases  Time elapsed: 0 s  <<< FAILURE!
+testIsPrimeStandardCases  Time elapsed: 0.006 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at v2.button.panic.CosmicFinalExamTest.testIsPrimeStandardCases(CosmicFinalExamTest.java:351)
 
-testTagOutCaseInsensitiveDestination  Time elapsed: 0 s  <<< FAILURE!
+testTagOutCaseInsensitiveDestination  Time elapsed: 0.004 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Should handle case-insensitive destinations ==> expected: <80.0> but was: <0.0>
 	at v2.button.panic.CosmicFinalExamTest.testTagOutCaseInsensitiveDestination(CosmicFinalExamTest.java:158)
 
-testTransferRejectsNegativeBalances  Time elapsed: 0.001 s  <<< FAILURE!
+testTransferRejectsNegativeBalances  Time elapsed: 0.003 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <48.0> but was: <0.0>
 	at v2.button.panic.CosmicFinalExamTest.testTransferRejectsNegativeBalances(CosmicFinalExamTest.java:71)
 
-testVelocityRejectsZeroTime  Time elapsed: 0 s  <<< FAILURE!
+testVelocityRejectsZeroTime  Time elapsed: 0.037 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: t=0 should throw IllegalArgumentException ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
 	at v2.button.panic.CosmicFinalExamTest.testVelocityRejectsZeroTime(CosmicFinalExamTest.java:216)
 
-testWelcome  Time elapsed: 0 s  <<< FAILURE!
+testWelcome  Time elapsed: 0.026 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 expected: <Fanta
 Fanta
 Fanta
-> but was: <>
+> but was: <Fanta
+Fanta
+Fanta
+>
 	at v2.button.panic.CosmicFinalExamTest.testWelcome(CosmicFinalExamTest.java:21)
 
-testVelocityStandardCase  Time elapsed: 0.001 s  <<< FAILURE!
+testVelocityStandardCase  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <10.0> but was: <0.0>
 	at v2.button.panic.CosmicFinalExamTest.testVelocityStandardCase(CosmicFinalExamTest.java:204)
 
-testCaesarCipherStandardCase  Time elapsed: 0 s  <<< FAILURE!
+testCaesarCipherStandardCase  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <Khoor> but was: <>
 	at v2.button.panic.CosmicFinalExamTest.testCaesarCipherStandardCase(CosmicFinalExamTest.java:238)
 
-testTransferDeductsExactly2Orglings  Time elapsed: 0.001 s  <<< FAILURE!
+testTransferDeductsExactly2Orglings  Time elapsed: 0.013 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <48.0> but was: <0.0>
 	at v2.button.panic.CosmicFinalExamTest.testTransferDeductsExactly2Orglings(CosmicFinalExamTest.java:54)
 
-testDrawPyramidRejectsNegativeHeight  Time elapsed: 0 s  <<< FAILURE!
+testDrawPyramidRejectsNegativeHeight  Time elapsed: 0.006 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
 	at v2.button.panic.CosmicFinalExamTest.testDrawPyramidRejectsNegativeHeight(CosmicFinalExamTest.java:343)
 
-testOrglingPresentationEasy  Time elapsed: 0 s  <<< FAILURE!
+testOrglingPresentationEasy  Time elapsed: 0.006 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <Y> but was: <>
 	at v2.button.panic.CosmicFinalExamTest.testOrglingPresentationEasy(CosmicFinalExamTest.java:433)
 
-testOrglingPresentationHard  Time elapsed: 0.001 s  <<< FAILURE!
+testOrglingPresentationHard  Time elapsed: 0.01 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <BBBAY> but was: <>
 	at v2.button.panic.CosmicFinalExamTest.testOrglingPresentationHard(CosmicFinalExamTest.java:474)
 
-testTagInRejectsNegativeBalances  Time elapsed: 0.001 s  <<< FAILURE!
+testTagInRejectsNegativeBalances  Time elapsed: 0.015 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Should deduct 12 from 100 → 88 ==> expected: <88.0> but was: <0.0>
 	at v2.button.panic.CosmicFinalExamTest.testTagInRejectsNegativeBalances(CosmicFinalExamTest.java:93)
 
-testOrglingPresentationMedium  Time elapsed: 0 s  <<< FAILURE!
+testOrglingPresentationMedium  Time elapsed: 0.018 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <BAYY> but was: <>
 	at v2.button.panic.CosmicFinalExamTest.testOrglingPresentationMedium(CosmicFinalExamTest.java:457)
 
-testTagOutRejectsNegativeBalances  Time elapsed: 0 s  <<< FAILURE!
+testTagOutRejectsNegativeBalances  Time elapsed: 0.013 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Should throw if balance < 20 ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
 	at v2.button.panic.CosmicFinalExamTest.testTagOutRejectsNegativeBalances(CosmicFinalExamTest.java:146)
 
-testLawOfGravitySmallValues  Time elapsed: 0.001 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Should handle very small values accurately ==> expected: <6.6742999999999985E-21> but was: <0.0>
-	at v2.button.panic.CosmicFinalExamTest.testLawOfGravitySmallValues(CosmicFinalExamTest.java:197)
-
-testDrawPyramidHeightOne  Time elapsed: 0 s  <<< FAILURE!
+testDrawPyramidHeightOne  Time elapsed: 0.001 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <#> but was: <>
 	at v2.button.panic.CosmicFinalExamTest.testDrawPyramidHeightOne(CosmicFinalExamTest.java:300)
 
-testCaesarCipherNegativeShift  Time elapsed: 0 s  <<< FAILURE!
+testCaesarCipherNegativeShift  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <Ebiil> but was: <>
 	at v2.button.panic.CosmicFinalExamTest.testCaesarCipherNegativeShift(CosmicFinalExamTest.java:267)
 
-testTagOutDeductsDestinationFare  Time elapsed: 0.001 s  <<< FAILURE!
+testTagOutDeductsDestinationFare  Time elapsed: 0.005 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 100 - 20 (Zenthros) = 80 ==> expected: <80.0> but was: <0.0>
 	at v2.button.panic.CosmicFinalExamTest.testTagOutDeductsDestinationFare(CosmicFinalExamTest.java:117)
 
