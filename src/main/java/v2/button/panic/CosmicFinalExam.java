@@ -2,6 +2,8 @@ package v2.button.panic;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 /**
  * The CosmicFinalExam is a playful, intergalactic Java challenge set in a chaotic universe
@@ -72,12 +74,25 @@ public class CosmicFinalExam {
     public static double tagOut(String destination, double balance) throws IllegalArgumentException {
         // TODO: Implement tagOut fare deduction logic based on destination
         String myString = destination.toLowerCase();
-        return switch (myString) {
-            case "zenthros" -> balance - 20;
-            case "kryndor" -> balance - 22;
-            case "bryxaria" -> balance - 27;
-            default -> balance - 0;
-        };
+        switch (myString) {
+            case "zenthros":
+                if (balance < 20) {
+                    throw new IllegalArgumentException("balance should be more than 20.");
+                }
+                return balance - 20;
+            case "kryndor":
+                if (balance < 22) {
+                    throw new IllegalArgumentException("balance should be more than 20.");
+                }
+                return balance - 22;
+            case "bryxaria":
+                if (balance < 27) {
+                    throw new IllegalArgumentException("balance should be more than 20.");
+                }
+                return balance - 27;
+            default:
+                return balance - 0;
+        }
     }
 
     /**
@@ -87,7 +102,13 @@ public class CosmicFinalExam {
      */
     public static double lawOfGravity(double m1, double m2, double r) {
         // TODO: Implement gravitational force calculation
-        
+        if (r == 0) {
+            throw new IllegalArgumentException("Args cannot be 0");
+        }
+
+        if (m1 == 0 || m2 == 0) {
+            return 0;
+        }
         return 6.67430e-11 * (m1 * m2) / (r * r);
     }
 
@@ -100,14 +121,33 @@ public class CosmicFinalExam {
      */
     public static double velocity(double distance, double time) {
         // TODO: Implement velocity calculation
-        return 0;
+        if (time <= 0) {
+            throw new IllegalArgumentException("Time must be greate than 0");
+        }
+        return distance / time;
     }
 
     /**
      * Caesar Cipher implementation with a given shift.
      */
     public static String caesarCipher(String input, int shift) {
-        // TODO: Implement Caesar Cipher encryption
+        int count;
+        if (shift > 26) count = shift - 26;
+        if (input.equals("")) return "";
+        if (shift == 0 || shift == 26) return input;
+
+
+        String[] alphabet = {
+                "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+                "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+        };
+        String upperCaseInput = input.toUpperCase();
+        ArrayList<String> alphabetList = new ArrayList<String>(Arrays.asList(alphabet));
+        for (int i = 0; i < input.length(); i++) {
+            if (alphabetList.contains(upperCaseInput.indexOf(i))) {
+                continue;
+            }
+        }
         return "";
     }
 
@@ -115,7 +155,15 @@ public class CosmicFinalExam {
      * Draw a Mario-style pyramid of height n.
      */
     public static void drawPyramid(int height) {
-        // TODO: Implement pyramid drawing using console output
+        if (height < 0) throw new IllegalArgumentException("height cannot be less than 0");
+        if (height == 0) System.out.print("");
+        for (int i = 1; i <= height; i++) {
+            if (i == height) {
+                System.out.print("#".repeat(i));
+            } else {
+                System.out.print(" ".repeat(height - i) + "#".repeat(i) + "\n");
+            }
+        }
     }
 
     /**
@@ -124,8 +172,8 @@ public class CosmicFinalExam {
      */
     public static boolean isPrime(int number) {
         if (number < 2) return false;
-        if (number % 2 == 0) return false;
-        for (int i = 3; i * i < number; i += 2) {
+        if (number % 2 == 0) return number == 2;
+        for (int i = 3; i * i <= number; i += 2) {
             if (number % i == 0) return false;
         }
         return true;
@@ -150,7 +198,25 @@ public class CosmicFinalExam {
      */
     public static String showOrglings( double Orglings ) {
         // TODO: Implement this method
-        return "";
+        LinkedHashMap<String,Integer> denom = new LinkedHashMap<>();
+        denom.put("B", 15);
+        denom.put("A", 10);
+        denom.put("Z", 5);
+        denom.put("Y", 1);
+
+        if (Orglings <= 0) return "";
+
+        StringBuilder result = new StringBuilder();
+        int sum = (int) Orglings;
+
+        for (var entry: denom.entrySet()) {
+            while (sum >= entry.getValue()) {
+                sum -= entry.getValue();
+                result.append(entry.getKey());
+            }
+        }
+
+        return result.toString();
     }
 
     /**
